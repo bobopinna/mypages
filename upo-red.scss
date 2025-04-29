@@ -1,0 +1,73 @@
+/*************************** Variables section. *****************************/
+$navbar-bg: #ce181e;
+$navbar-color: #ffffff;
+$card-bg: #f8f9fa;
+$edit-active: #28a745;
+$link-color: #0070A8;
+
+/*************************** Import section  *****************************/
+@import "fontawesome";
+@import "bootstrap";
+@import "moodle";
+
+/*************************** Rules section ****************************/
+.navbar.navbar-light.bg-white {
+	background-color: $navbar-bg !important;
+	color: $navbar-color !important;
+	
+	.nav-link {
+	    color: darken($navbar-color, 10%) !important;
+	}
+	
+	.nav-link:hover {
+	    color: $navbar-color !important;
+	}
+	
+	.dropdown-toggle {
+	    color: $navbar-color !important;
+	}
+	
+	.moremenu {
+		.nav-link:hover {
+		    background-color: lighten($navbar-bg, 15%) !important;
+		}
+		
+		.nav-link.active {
+		    border-bottom-color: $navbar-color !important;
+		}
+	}
+	
+	.custom-control-input:checked~.custom-control-label::before {
+	    background-color: $edit-active;
+	    border-color: $edit-active;
+	}
+	
+	.text-primary {
+	    color: $navbar-color !important;
+	}
+	
+	.navbar-nav {
+	    .usermenu {
+	        .login a {
+	            color: $navbar-color !important;
+	        }
+	    }
+	}
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.drawer-primary .drawerheader {
+    background-color: $navbar-bg;
+
+    .drawertoggle {
+        color: $navbar-color;
+    }
+}
+
+.card {
+    background-color: $card-bg;
+    padding: .5e
+}
